@@ -6,22 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhando com Tabelas</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        table{
+        table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
-        thead, tfoot{
-            background-color: gray;
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        thead, tfoot {
+            background-color: #383838;
             color: white;
         }
-        td, th{
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+        tbody > tr:nth-child(even) { /* odd (ou 2n-1) - linhas ímpares | even (2n) - linhas pares */
+            background-color: lightgray;
+        }
+        td, th {
             border: 1px solid black;
             padding: 10px;
         }
-        td.num{
+        td.num {
             text-align: right;
         }
     </style>
@@ -29,10 +44,11 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -147,10 +163,19 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>213 317 639</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe delectus pariatur, provident ducimus quisquam et nesciunt quam quidem consequatur harum possimus temporibus similique deleniti laboriosam, reprehenderit ea! Corrupti, sed temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores saepe sed repellendus? Ab voluptatibus odio nemo illum nobis voluptates. Adipisci minima explicabo fuga voluptatibus quae minus! Aspernatur, id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa consequuntur mollitia in doloribus placeat consequatur et est, soluta neque. Sunt sint minima incidunt! Cum a at beatae ea minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas quidem maxime quae in ab ad! Incidunt ut rem quod accusantium! Odio quaerat doloribus, veritatis earum iusto vel sint rerum.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe delectus pariatur, provident ducimus quisquam et nesciunt quam quidem consequatur harum possimus temporibus similique deleniti laboriosam, reprehenderit ea! Corrupti, sed temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores saepe sed repellendus? Ab voluptatibus odio nemo illum nobis voluptates. Adipisci minima explicabo fuga voluptatibus quae minus! Aspernatur, id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa consequuntur mollitia in doloribus placeat consequatur et est, soluta neque. Sunt sint minima incidunt! Cum a at beatae ea minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas quidem maxime quae in ab ad! Incidunt ut rem quod accusantium! Odio quaerat doloribus, veritatis earum iusto vel sint rerum.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe delectus pariatur, provident ducimus quisquam et nesciunt quam quidem consequatur harum possimus temporibus similique deleniti laboriosam, reprehenderit ea! Corrupti, sed temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores saepe sed repellendus? Ab voluptatibus odio nemo illum nobis voluptates. Adipisci minima explicabo fuga voluptatibus quae minus! Aspernatur, id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa consequuntur mollitia in doloribus placeat consequatur et est, soluta neque. Sunt sint minima incidunt! Cum a at beatae ea minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas quidem maxime quae in ab ad! Incidunt ut rem quod accusantium! Odio quaerat doloribus, veritatis earum iusto vel sint rerum.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe delectus pariatur, provident ducimus quisquam et nesciunt quam quidem consequatur harum possimus temporibus similique deleniti laboriosam, reprehenderit ea! Corrupti, sed temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores saepe sed repellendus? Ab voluptatibus odio nemo illum nobis voluptates. Adipisci minima explicabo fuga voluptatibus quae minus! Aspernatur, id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa consequuntur mollitia in doloribus placeat consequatur et est, soluta neque. Sunt sint minima incidunt! Cum a at beatae ea minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas quidem maxime quae in ab ad! Incidunt ut rem quod accusantium! Odio quaerat doloribus, veritatis earum iusto vel sint rerum.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe delectus pariatur, provident ducimus quisquam et nesciunt quam quidem consequatur harum possimus temporibus similique deleniti laboriosam, reprehenderit ea! Corrupti, sed temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores saepe sed repellendus? Ab voluptatibus odio nemo illum nobis voluptates. Adipisci minima explicabo fuga voluptatibus quae minus! Aspernatur, id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa consequuntur mollitia in doloribus placeat consequatur et est, soluta neque. Sunt sint minima incidunt! Cum a at beatae ea minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam voluptas quidem maxime quae in ab ad! Incidunt ut rem quod accusantium! Odio quaerat doloribus, veritatis earum iusto vel sint rerum.</p>
 </body>
 </html>
